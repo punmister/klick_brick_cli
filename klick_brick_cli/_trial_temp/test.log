@@ -1,0 +1,2 @@
+2021-01-26 00:51:04+0530 [-] Log opened.
+2021-01-26 00:51:38+0530 [-] <string>:1: builtins.SyntaxWarning: "is" with a literal. Did you mean "=="?
