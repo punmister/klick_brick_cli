@@ -16,3 +16,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 klickbrick = "klick_brick_cli:main"
+
+[[tool.poetry.source]]
+name = "testpypi"
+url = "https://test.pypi.org/legacy/"
