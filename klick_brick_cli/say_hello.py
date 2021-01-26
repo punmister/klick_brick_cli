@@ -14,10 +14,10 @@ class Hello():
             args = parser.parse_args()
             if args.hello:
                 if args.name is None:
-                    print("Hello")
+                    # print("Hello")
                     return "Hello"
                 else:
-                    print(f"Hello {args.name}")
+                    # print(f"Hello {args.name}")
                     return f"Hello {args.name}"
         elif self.mode == 'unittest':
             if self.test_param[0]:
