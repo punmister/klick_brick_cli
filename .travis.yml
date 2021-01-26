@@ -4,6 +4,7 @@ python:
 install:
   - pip install poetry
   - pip install twisted
+  - pip install behave
 script:
-  - python3 test_hello.py
+  - python3 klick_brick_cli/test_hello.py
   - behave
