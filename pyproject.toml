@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "klick_brick_cli"
 version = "0.1.0"
-description = ""
+description = "Custom Command Line Interface"
 authors = ["Prudhvi <poornagurram@gmail.com>"]
 
 [tool.poetry.dependencies]
@@ -13,3 +13,6 @@ pytest = "^5.2"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+klick_brick_cli = "klick_brick_cli:main"
