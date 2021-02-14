@@ -1,6 +1,6 @@
-from klick_brick_cli import __version__
+from klick_brick_cli import __version__, say_hello
 import unittest
-from klick_brick_cli import say_hello
+from types import SimpleNamespace
 
 def test_version():
     assert __version__ == '0.1.0'
@@ -8,17 +8,13 @@ def test_version():
 class TestStringMethods(unittest.TestCase):
 
     def setUp(self):
-        self.mode = 'unittest'
-        self.test_param = ['hello', {'name': 'Test App'}]
-        self.test_hello = say_hello.Hello(mode=self.mode, test_param=self.test_param)
-        self.test_param = ['hello', 'None']
-        self.test_only_hello = say_hello.Hello(mode=self.mode, test_param=self.test_param)
+        self.test_hello = say_hello.Hello()
 
     def test_Hello(self):
-        self.assertEqual(self.test_hello.say_hello(), 'Hello Test App')
+        self.assertEqual(self.test_hello.say_hello(SimpleNamespace(name='Test App', command='hello')), 'Hello Test App')
 
     def test_only_hello(self):
-        self.assertEqual(self.test_only_hello.say_hello(), 'Hello')
+        self.assertEqual(self.test_hello.say_hello(SimpleNamespace(name=None, command='hello')), 'Hello')
 
 
 if __name__ == '__main__':
