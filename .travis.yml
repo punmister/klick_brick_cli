@@ -8,3 +8,7 @@ install:
 script:
   - python -m unittest tests.test_klick_brick_cli
   - behave
+
+cache:
+  directories:
+  - $HOME/.cache/pre-commit
