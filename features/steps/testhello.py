@@ -15,3 +15,4 @@ def step_impl(context):
 @then('it should return \'Hello\'')
 def step_impl(context):
     assert context.output == 'Hello'
+
